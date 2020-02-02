@@ -1,16 +1,29 @@
 package com.exampleProject.demo.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(name = "user_role")
 public class UserRole {
 
     @Id
+    @Column(name = "user_role_id")
     private int userRoleId;
-    @NotNull
-    private String userRole;
+
+    public UserRole() {
+    }
+
+
+    public int getUserRoleId() {
+        return userRoleId;
+    }
+
+    public void setUserRoleId(int userRoleId) {
+        this.userRoleId = userRoleId;
+    }
+
+
 
 
 }
