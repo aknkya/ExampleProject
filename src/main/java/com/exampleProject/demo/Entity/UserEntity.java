@@ -2,8 +2,6 @@ package com.exampleProject.demo.Entity;
 
 
 
-import com.sun.istack.Nullable;
-
 import javax.persistence.*;
 
 import javax.validation.constraints.Email;
@@ -38,6 +36,8 @@ public class UserEntity {
     @ManyToOne(cascade =CascadeType.ALL)
     @JoinColumn(name = "user_role_user_role_id")
     private UserRole userRole;
+
+
 
     public Long getId() {
         return id;
@@ -87,8 +87,7 @@ public class UserEntity {
         this.userEmail = userEmail;
     }
 
-    public UserEntity() {
-    }
+
 
     public UserRole getUserRole() {
         return userRole;
